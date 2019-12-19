@@ -4,7 +4,7 @@ ShortUrl
 **ShortUrl** 是一个尽可能聚合市面上提供短链接服务应用的 `PHP` 包。
 
 安装
-------------
+-----
 1. 环境要求:
    - php >= 5.5
    - cURL extension
@@ -75,7 +75,8 @@ var_dump($result);
 ```
 
 
-常用的短网址
+常用的短网址服务商
+-----
 > https://dwz.cn/ (百度短网址) - 已支持
 
 >> 百度短链接: https://dwz.cn
