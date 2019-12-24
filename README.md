@@ -94,6 +94,10 @@ var_dump($result);
 
 >> `token` 获取地址: https://dwz.cn/console/userinfo
 
+> http://maiyurl.cn/ - 已支持
+
+>> 麦云短链接: http://maiyurl.cn
+
 > http://yourls.org/
 
 > https://bitly.com/
