@@ -17,6 +17,17 @@ class ShortUrlTest extends TestCase
 {
     public function testHelloWorld()
     {
+        //PHP_VERSION >=5.4
+        $shortUrl = new ShortUrlService();
+        $result = $shortUrl->service((new BaiDuDriver()))
+            ->boot(array(
+                'token' => 'xxxx',
+                'long_url' => 'http://www.baidu.com',
+            ));
+        var_dump($result);
+
+
+        //PHP_VERSION >=5.5
         $shortUrl = new ShortUrlService();
         $result1 = $shortUrl->service(BaiDuDriver::class)
             ->boot(array(

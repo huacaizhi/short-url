@@ -23,7 +23,14 @@ class ShortUrlService extends CommService
      */
     public static function app($class)
     {
-        if (!class_exists($class)) new \Exception('class not found');
+        if (empty($class)) {
+            return new \Exception('class not found');
+        }
+
+        if (is_object($class)) {
+            $class = get_class($class);
+        }
+        if (!class_exists($class)) return new \Exception('class not found');
         return new $class;
     }
 
@@ -64,7 +71,9 @@ class ShortUrlService extends CommService
      */
     public function boot($data = null, $type = ShortUrlContract::TO_SHORT)
     {
-        if (!in_array($type, array(ShortUrlContract::TO_SHORT))) new \Exception('服务类名出错!');
+        if (!in_array($type, array(ShortUrlContract::TO_SHORT))) {
+            return new \Exception('服务类名出错!');
+        }
 
         return $this->shortUrlService->setData($data)->{$type}();
     }

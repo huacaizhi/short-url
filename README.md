@@ -6,7 +6,7 @@ ShortUrl
 安装
 -----
 1. 环境要求:
-   - php >= 5.5
+   - php >= 5.4
    - cURL extension
 
 2. 如果您通过 `composer` 管理您的项目依赖，可以在您的项目根目录运行：
@@ -35,8 +35,19 @@ ShortUrl
 use HuaCaiZhi\ShortUrlPackage\Driver\BaiDuDriver;
 use HuaCaiZhi\ShortUrlPackage\Service\ShortUrlService;
 
+//PHP_VERSION >=5.5
 $shortUrl = new ShortUrlService();
 $result = $shortUrl->service(BaiDuDriver::class)
+    ->boot(array(
+        'token' => 'xxxx',
+        'long_url' => 'http://www.baidu.com',
+    ));
+var_dump($result);
+
+
+//PHP_VERSION >=5.4
+$shortUrl = new ShortUrlService();
+$result = $shortUrl->service((new BaiDuDriver()))
     ->boot(array(
         'token' => 'xxxx',
         'long_url' => 'http://www.baidu.com',
