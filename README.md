@@ -16,7 +16,7 @@ ShortUrl
    或者在您的 `composer.json` 中声明对 `huacaizhi/short-url` for PHP的依赖：
 
         "require": {
-            "huacaizhi/short-url": "0.1.0"
+            "huacaizhi/short-url": "0.2.0"
         }
 
    然后通过 `composer install` 安装依赖。`composer` 安装完成后，在您的 `PHP` 代码中引入依赖即可：
