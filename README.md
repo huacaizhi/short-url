@@ -6,7 +6,7 @@ ShortUrl
 安装
 -----
 1. 环境要求:
-   - php >= 5.4
+   - php >= 5.5
    - cURL extension
 
 2. 如果您通过 `composer` 管理您的项目依赖，可以在您的项目根目录运行：
@@ -24,7 +24,7 @@ ShortUrl
         require_once __DIR__ . '/vendor/autoload.php';
 
 
-3. 下载SDK源码，在您的代码中引入SDK目录下的 `autoload.php` 文件：
+3. 下载`SDK`源码，在您的代码中引入SDK目录下的 `autoload.php` 文件：
 
         require_once '/path/to/shorturl/autoload.php';
 
